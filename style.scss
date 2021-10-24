@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* variables */
+$background:#e0dcdc;
+$ligther: rgb(163, 157, 157);
+$font-logo: #ffffff;
+$span-logo: #75AADB;
+$span-logo-ligth: #7994ad;
+
+body {
+    background-color: $background;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $ligther;
+    padding: 0 0 1% 0;
+
+
+    h1 {
+        margin-bottom: 10px;
+        font-size: 2.5em;
+        transform: scale(.9);
+        cursor: pointer;
+        -webkit-text-stroke: 1.5px rgb(27, 27, 27);
+        font-family: 'Sigmar One', cursive;
+        transition: .4s;
+        
+        &:hover {
+            transform: scale(1);
+            transition: .4s;
+        }
+        
+        a {
+            color: $font-logo;
+            text-decoration: none;
+        }
+
+        span {
+            color: $span-logo-ligth;
+        }
+
+        &:hover span {
+            color: $span-logo;
+            transition: .4s;
+        }
+        
+    }
+
+    .navigation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 50%;
+        height: 50px;
+
+
+    }
+    .buscador {
+        display: flex;
+        width: 50%;
+        height: 90%;
+        align-items: center;
+        justify-content: space-evenly;
+
+        input {
+            height: 90%;
+            width: 85%;
+            border: none;
+            border-radius: 10px 0 0 10px;
+            padding-left: 5%;
+            color: rgb(65, 64, 64);
+            font-size: 1em;
+        }
+        
+        .iconSearch {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 90%;
+            width: 15%;
+            background-color: #ffffff;
+            color: $ligther;
+            font-size: 1.2em;
+            border-radius: 0 10px 10px 0;
+            cursor: pointer;
+
+            &:hover {
+                font-size: 1.15em;
+                transition: ease .4s;
+            }
+        }
+    }
+
+    .navList {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        list-style: none;
+        height: 70%;
+        width: 50%;
+        margin-left: 10px;
+
+        ul {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            height: 90%;
+            font-size: 1em;
+            color: #000;
+            list-style: none;
+        }
+
+        li {
+            cursor: pointer;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            font-size: 1em;
+            
+            &:hover {
+                font-size: 1.1em;
+                color: rgb(65, 64, 64);
+                transition: .4s;
+            }
+        }
+
+        
+
+        
+    }
+}
+
