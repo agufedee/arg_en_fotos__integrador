@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,800;1,700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +7,8 @@
 
 /* variables */
 body {
-  background-color: #e0dcdc;
+  background-color: #cccccc;
+  font-family: "Open Sans", serif;
 }
 
 header {
@@ -24,39 +25,37 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #a39d9d;
+  background-color: #383838;
   padding: 0 0 1% 0;
 }
 
-header h1 {
-  margin-bottom: 10px;
+header .titleLogo {
   font-size: 2.5em;
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
-  cursor: pointer;
-  -webkit-text-stroke: 1.5px #1b1b1b;
+  -webkit-text-stroke: 1.5px #000;
   font-family: 'Sigmar One', cursive;
   -webkit-transition: .4s;
   transition: .4s;
 }
 
-header h1:hover {
+header .titleLogo:hover {
   -webkit-transform: scale(1);
           transform: scale(1);
   -webkit-transition: .4s;
   transition: .4s;
 }
 
-header h1 a {
+header .titleLogo a {
   color: #ffffff;
   text-decoration: none;
 }
 
-header h1 span {
+header .titleLogo span {
   color: #7994ad;
 }
 
-header h1:hover span {
+header .titleLogo:hover span {
   color: #75AADB;
   -webkit-transition: .4s;
   transition: .4s;
@@ -66,9 +65,9 @@ header .navigation {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -76,7 +75,7 @@ header .navigation {
   height: 50px;
 }
 
-header .buscador {
+header .navigation .buscador {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -90,7 +89,7 @@ header .buscador {
           justify-content: space-evenly;
 }
 
-header .buscador input {
+header .navigation .buscador input {
   height: 90%;
   width: 85%;
   border: none;
@@ -100,7 +99,7 @@ header .buscador input {
   font-size: 1em;
 }
 
-header .buscador .iconSearch {
+header .navigation .buscador .iconSearch {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -113,51 +112,53 @@ header .buscador .iconSearch {
   height: 90%;
   width: 15%;
   background-color: #ffffff;
-  color: #a39d9d;
+  color: #383838;
   font-size: 1.2em;
   border-radius: 0 10px 10px 0;
   cursor: pointer;
 }
 
-header .buscador .iconSearch:hover {
+header .navigation .buscador .iconSearch:hover {
   font-size: 1.15em;
   -webkit-transition: ease .4s;
   transition: ease .4s;
 }
 
-header .navList {
+header .navigation .navList {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   list-style: none;
   height: 70%;
   width: 50%;
-  margin-left: 10px;
 }
 
-header .navList ul {
+header .navigation .navList ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
   height: 90%;
   font-size: 1em;
-  color: #000;
+  color: #ffffff;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-header .navList li {
+header .navigation .navList ul li {
   cursor: pointer;
   height: 100%;
   display: -webkit-box;
@@ -166,13 +167,39 @@ header .navList li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 1em;
+  font-size: 1.1em;
+  padding: 3% 3%;
+  border-radius: 10px;
 }
 
-header .navList li:hover {
-  font-size: 1.1em;
-  color: #414040;
-  -webkit-transition: .4s;
-  transition: .4s;
+header .navigation .navList ul li:hover {
+  color: #75AADB;
+  background-color: #414040;
+  -webkit-transition: ease .4s;
+  transition: ease .4s;
+}
+
+header .titleLogo:hover .navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.carouselContainer {
+  width: 80%;
+  margin: auto;
+  position: relative;
+}
+
+.carouselContainer img {
+  height: calc(100vh - 119.65px);
+}
+
+.carouselContainer .imgDesc {
+  position: absolute;
+  margin: auto;
+  color: #ffffff;
+  top: 20px;
+  left: 30px;
 }
 /*# sourceMappingURL=style.css.map */
