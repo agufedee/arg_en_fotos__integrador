@@ -14,9 +14,15 @@ $font-main: #ffffff;
 $span-logo: #75AADB;
 $span-logo-ligth: #7994ad;
 
-body {
-    background-color: $background;
+.body {
+    background: $background;
+}
+
+.webContainer {
+    width: 80%;
+    margin: auto;
     font-family: "Open Sans", serif;
+    box-shadow: 0px 0px 30px 10px $ligther;
 }
 
 header {
@@ -60,7 +66,7 @@ header {
         display: flex;
         justify-content: space-evenly;
         align-items: center;
-        width: 50%;
+        width: 70%;
         height: 50px;
 
         .buscador {
@@ -113,27 +119,26 @@ header {
                 justify-content: space-evenly;
                 align-items: center;
                 width: 100%;
-                height: 90%;
-                font-size: 1em;
-                color: $font-main;
+                height: 100%;
                 list-style: none;
                 margin: 0;
                 padding: 0;
 
-                li {
-                    cursor: pointer;
+                li a {
+                    text-decoration: none;
+                    color: $font-main;
+                    font-size: 1em;
                     height: 100%;
                     display: flex;
                     align-items: center;
-                    font-size: 1.1em;
-                    padding: 3% 3%;
+                    padding: 10px 15px;
                     border-radius: 10px;
                     
                     &:hover {
-                        color: $span-logo;
-                        background-color: rgb(65, 64, 64);
+                        background-color: #535353;
                         transition: ease .4s;
                     }
+                
                 }
             }
         
@@ -146,19 +151,45 @@ header {
 }
 
 .carouselContainer {
-    width: 80%;
-    margin: auto;
-    position: relative;
-
     img {
-        height: calc(100vh - 119.65px);
+        height: calc(100vh - 114.88px);
     }
 
     .imgDesc {
         position: absolute;
-        margin: auto;
         color: $font-main;
-        top: 20px;
-        left: 30px;
+        top: 30px;
+        left: 40px;
     }
+}
+
+.galeryPopulares {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+
+    .titlePop {
+        width: 100%;
+        text-align: center;
+        margin: 40px 0;
+
+    }
+
+    .cardsPop {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        gap: 15px;
+    }
+
+    .cardsImg {
+        width: 23%;
+        align-items: center;
+        img {
+            width: 100%;
+        }
+    }
+
 }
