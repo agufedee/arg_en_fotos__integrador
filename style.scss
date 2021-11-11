@@ -86,14 +86,16 @@ header {
 					color: $font-main;
 					font-size: 1em;
 					height: 100%;
-						display: flex;
+					display: flex;
 					align-items: center;
 					padding: 10px 15px;
-					border-radius: 10px;
+					border-radius: 3px;
+					position: relative;
 
 					&:hover {
 						background-color: #535353;
-						transition: ease 0.4s;
+						transform: scale(1.1);
+						transition: ease-in-out 0.4s;
 					}
 				}
 			}
@@ -143,6 +145,7 @@ header {
 		height: 40%;
 		width: 30%;
 		align-items: center;
+		position: relative;
 		
 		img {
 			width: 100%;
@@ -151,7 +154,35 @@ header {
 			border-radius: 3px;
 		}
 
+		.descImg {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background: rgba(0, 0, 0, 0.527);
+			top: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			transform: scale(0);
+			transition: ease-in-out .5s;
+			border-radius: 3px;
+			cursor: pointer;
+
+			p {
+				font-weight: 500;
+				font-size: 1.2em;
+				color: #ffffff;
+				width: 40%;
+				text-align: center;
+			}
+		}
+
+		&:hover .descImg {
+			transform: scale(1);
+		}
 	}
+
+
 	.textGallery {
 		display: block;
 		text-align: center;
