@@ -24,7 +24,7 @@ $span-logo-ligth: #7994ad;
 	font-family: "Open Sans", serif;
 	box-shadow: 0px 0px 30px 10px $ligther;
 }
-
+/* header */
 header {
 	display: flex;
 	flex-direction: column;
@@ -58,9 +58,9 @@ header {
 
 	.navigation {
 		display: flex;
-		justify-content: space-between;
+		justify-content: center;
 		align-items: center;
-		width: 60%;
+		width: 70%;
 		
 
 		.navList {
@@ -68,7 +68,6 @@ header {
 			align-items: center;
 			justify-content: center;
 			list-style: none;
-			height: 70%;
 			width: 100%;
 
 			ul {
@@ -88,23 +87,48 @@ header {
 					height: 100%;
 					display: flex;
 					align-items: center;
-					padding: 10px 15px;
-					border-radius: 3px;
+					padding: 5px 10px;
+					border-radius: 3px 3px 0 0;
 					position: relative;
 
 					&:hover {
 						background-color: #535353;
 						transform: scale(1.1);
-						transition: ease-in-out 0.4s;
+						transition: ease all 0.2s;
 					}
 				}
 			}
+
+			ul:first-child{
+				width: 60%;
+				border-right: solid 1px $font-main;
+			}
+
+			ul:last-child {
+				width: 40%;
+				
+			}
+			
+			.sesionList {
+				a {
+					background-color: #535353;
+				}
+
+				.inicioSesion {
+					background: none;
+
+					&:hover	{
+						background-color: #535353;
+					}
+				}
+			}	
 		}
 	}
 
+/* carrusel */
 .carouselContainer {
 	img {
-		height: calc(100vh - 108.73px);
+		height: calc(100vh - 100.81px);
 	}
 
 	.imgDesc {
@@ -114,7 +138,7 @@ header {
 		left: 40px;
 	}
 }
-
+/* seccion pupulares */
 .galleryPopulares {
 	display: flex;
 	flex-direction: column;
@@ -164,7 +188,7 @@ header {
 			justify-content: center;
 			align-items: center;
 			transform: scale(0);
-			transition: ease-in-out .5s;
+			transition: ease-in-out .3s;
 			border-radius: 3px;
 			cursor: pointer;
 
@@ -182,7 +206,6 @@ header {
 		}
 	}
 
-
 	.textGallery {
 		display: block;
 		text-align: center;
@@ -197,5 +220,108 @@ header {
 			font-size: .7em;
 			margin-bottom: 2.1em;
 		}
+	}
+}
+
+.formSuscribe{
+	text-align: center;
+	padding: 40px 0 20px 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	h3{
+		padding: 30px 0 20px 0;
+		margin: 0;
+	}
+
+	.formInputs{
+		display: flex;
+		justify-content: center;
+		width: 70%;	
+		gap: 20px;	
+
+		label {
+			width: 40%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+	
+		input{
+			margin-top: 3px;
+			display: block;
+			text-align: center;
+			border: none;
+			border-radius: 3px;
+			padding: 5px 10px;
+			width: 100%;
+		}
+	}
+
+	button {
+		margin-top: 20px;
+		border: none;
+		border-radius: 3px;
+		background: $ligther;
+		color: $font-main;
+		padding: 5px 10px;
+
+	}
+	button:hover {
+		transition: .2s;
+		transform: scale(1.1);
+		background: #252525;
+	}
+}
+
+.socialBar {
+	position: fixed;
+	right: 0; 
+	top: 35%;
+	font-size: 1.5em;
+	display: flex;
+	flex-direction: column;
+
+	.icon{
+		text-decoration: none;
+		color: $font-main;
+		padding: 10px;
+		display: flex;
+		justify-content: center;
+		transition: all .2s ease;
+		background: $ligther;
+
+	}	
+	
+	:first-child{
+		border-radius: 3px 0 0 0;
+	}
+	:last-child{
+		border-radius: 0 0 0 3px;
+	}
+	
+	.icon-facebook:hover {
+		background: #2e406e;
+		transform: scale(1.1);
+		border-radius: 3px 0 0 3px;
+	}
+
+	.icon-twitter:hover {
+		background: #339dc5;
+		transform: scale(1.1);
+		border-radius: 3px 0 0 3px;
+	}
+
+	.icon-instagram:hover {
+		background: #833AB4;
+		transform: scale(1.1);
+		border-radius: 3px 0 0 3px;
+	}
+
+	.icon-mail2:hover {
+		background: #E1306C;
+		transform: scale(1.1);
+		border-radius: 3px 0 0 3px;
 	}
 }
