@@ -17,7 +17,7 @@ $span-logo-ligth: #7994ad;
 
 .body {
 	background: $background;
-	font-family: "Open Sans", serif;
+	// font-family: "Open Sans", serif;
 	display: flex;
 	flex-direction: column;
 	height: 100vh;	
@@ -27,17 +27,17 @@ $span-logo-ligth: #7994ad;
 /* header */
 header {
 	display: flex;
-	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
 	background-color: $ligther;
-	padding: 0 0 1% 0;
+	padding: 1% 2%;
 
 	.titleLogo {
 		font-size: 2.5em;
 		transform: scale(0.9);
 		text-shadow: 2px 2px #000;
 		font-family: "Sigmar One", cursive;
+		text-align: center;
 
 		&:hover {
 			transform: scale(1);
@@ -54,6 +54,17 @@ header {
 		}
 	}
 
+	.burguer {
+		display: none;
+
+		a {
+			color: $font-main;
+			font-size: 1.8em;
+			text-decoration: none;
+			padding: 0 8px;
+		}
+	}
+
 	.navigation {
 		display: flex;
 		justify-content: center;
@@ -65,7 +76,6 @@ header {
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			list-style: none;
 			width: 100%;
 	
 			ul {
@@ -73,21 +83,18 @@ header {
 				justify-content: space-around;
 				align-items: center;
 				width: 100%;
-				height: 100%;
 				list-style: none;
 				margin: 0;
 				padding: 0;
-	
+				
 				li a {
 					text-decoration: none;
 					color: $font-main;
 					font-size: 1em;
-					height: 100%;
 					display: flex;
 					align-items: center;
 					padding: 5px 10px;
 					border-radius: 3px 3px 0 0;
-					position: relative;
 	
 					&:hover {
 						background-color: #535353;
@@ -99,12 +106,10 @@ header {
 	
 			ul:first-child{
 				width: 60%;
-				border-right: solid 1px $font-main;
 			}
 	
 			ul:last-child {
-				width: 40%;
-				
+				width: 40%;	
 			}
 			
 			.sesionList {
@@ -522,16 +527,100 @@ footer {
 	}
 	
 	header {
-		padding: 0;
-		line-height: 768px;
+		padding: 0 4% 0 2%;
+		z-index: 999;
+
+		.burguer{
+			display: flex;
+			
+			a:hover{
+				background: #535353;
+			}
+		}
 
 		.navigation{
 			display: none;
+			position: absolute;
+			background: $ligther;
+			top: 56px;
+			left: 0;
+			width: 100%;
+
+			.navList {
+				flex-direction: column;
+				align-items: space-between;
+
+				li {
+					a, a.inicioSesion {
+						height: 40px;
+						margin-bottom: 10px;
+					}
+				}
+
+				.list {
+					width: 600px;
+				}
+
+			}
+			
 		}
+		.burguer:hover ~ .navigation{
+			display: block;
+		}
+	}
+
+	.carouselContainer{
+		img {
+			height: 512px;
+		}
+	}
+
+	.form_contactContainer {
+		height: auto;
 	}
 
 	.socialBar{
 		display: none;
 	}
 }
+
+@media (max-width: 420px) {
+	header {
+		.titleLogo {
+			font-size: 2em;
+			line-height: 46.39px;
+		}
+
+	}
+
+	.carouselContainer {
+		img {
+			height: 400px;
+		}
+	}
+
+	.galleryPopulares {
+		height: auto;
+
+		.cardsPop{
+			flex-wrap: wrap;
+			width: 90%;
+			height: auto;
+			position: static;
+
+			.cardsImg {
+				width: 100%;
+				position: static;
+			}
+				.descImg {
+					display: none;
+				}
+			}
+		
+	}
+	.form_contactContainer {
+		height: auto;
+	}
+}
+
 
